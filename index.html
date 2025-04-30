@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi portfolio web</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+    <script src="codigo.js"></script>
+
+</head>
+<body id="body">
+
+    <header>
+        <div class="menu">
+            <ul>
+                <li><a href="#acerca-de-mi">Acerca de mí</a></li>
+                <li><a href="#proyectos">Proyectos</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+                <li><a href="#conocimientos">Conocimientos</a></li>
+            </ul>
+        </div>  
+    </header>
+    
+    <div class="imagenPerfil">
+        <img width= "300px" src="C:\Users\lucia\Downloads\miperfilPortfolio.png" alt="Mi imagen del portfolio">
+        <p>
+            ¡Hola, soy Lucia! programadora en formación en la UTN FRGP.<br> 
+            Apasionada por el desarrollo, la música y los nuevos desafíos 🧠💻
+        </p>
+    </div>
+
+    <section id="acerca-de-mi">
+        <h2>Acerca de mi👩‍💻</h2>
+        <p>
+            Soy Lucía, estudiante de la Tecnicatura Superior en Programación en la UTN FRGP. <br>
+            Me caracterizo por ser una persona proactiva, y en aprendizaje continuo. <br>
+            Siento una gran pasión tanto por la programación como por la música. <br>
+            Además, poseo un nivel B2 de inglés, idioma que disfruto y considero fundamental para mi desarrollo profesional. <br>
+            Me motivan los desafíos y estoy siempre dispuesta a superarme🚀.
+        </p>
+    </section>
+
+    <section id="conocimientos">
+        <h5>Conocimientos</h5>
+        <p>
+            Poseo sólidos conocimientos en HTML, CSS, JavaScript, C++ y C#. <br>
+            Además, cuento con una base en Python y manejo de bases de datos en SQL Server. <br>
+            También tengo experiencia en la gestión de proyectos utilizando Trello, aplicando buenas prácticas de organización y planificación.
+        </p>
+        <img src="https://cdn.pixabay.com/photo/2017/08/05/11/16/logo-2582748_960_720.png" alt="imagenHTML">
+        <img src="https://cdn.pixabay.com/photo/2017/08/05/11/16/logo-2582747_1280.png" alt="imagenCSS">
+        <img src="https://static.vecteezy.com/system/resources/previews/027/127/463/non_2x/javascript-logo-javascript-icon-transparent-free-png.png" alt="imagenJavaScript">
+        <img src="https://cdn.iconscout.com/icon/free/png-256/free-cplusplus-3628708-3029933.png" alt="imagenC">
+        <img src="https://cdn.iconscout.com/icon/free/png-256/free-csharp-1175240.png" alt="imagenC#">
+        <img src="https://www.todosoluciones.es/wp-content/uploads/2024/11/Python-Logo-600x445.png.webp" alt="imagenPython">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmq5AUsCoLML5k5TImMJKEfgny5Ak9uT2dsw&s" alt="imagenSQL">
+    </section>
+
+    <section id="proyectos">
+        <h4>Mis proyectos</h4>
+        <div class="proyectos-cards">
+            <div class="proyecto-card">
+                <div class="video">
+                    <iframe src="https://www.youtube.com/embed/DJDzxcUpP1E" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                </div>
+            </div>
+            
+            <div class="proyecto-card">
+                <div class="video">
+                    <iframe src="" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                </div>
+            </div>
+
+            <div class="proyecto-card">
+                <div class="video">
+                    <iframe src="" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                </div>
+            </div>
+
+        </div>
+        
+
+    </section>
+
+    <section id="contacto">
+        <h6>Formulario de Contacto</h6>
+        <form action="https://formsubmit.co/luciapazmanagement@gmail.com" method="POST">
+            <label for="Nombre">Nombre</label><input type="text" name="nombre" placeholder="Nombre" required>
+            <label for="Apellido">Apellido</label><input type="text" name="apellido" placeholder="Apellido" required>
+            <label for="Telefono">Telefono</label><input type="tel" name="telefono" placeholder="Teléfono" required>
+            <label for="Email">Email</label><input type="email" name="email" placeholder="Email" required>
+            <label for="Comentarios">Comentarios</label><textarea name="comentarios" placeholder="Comentarios" required></textarea>
+        
+            <!-- Protecciones opcionales -->
+            <input type="hidden" name="_captcha" value="false">
+            <button type="submit">Enviar</button>
+          </form>
+        <h3>Contacto</h3>
+        <a href="https://www.linkedin.com/in/luciamilagrospaz/" target="_blank"> <img class="imgLinkedIn" src="https://cdn-icons-png.flaticon.com/512/4401/4401412.png" alt="imagenLinkedIn"></a>
+        <a href="https://github.com/lucpaz21" target="_blank"><img class="imgGitHub" src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="imagenGitHub"></a>
+        <a href="mailto:luciapazmanagement@gmail.com" target="_blank"><img class="imgEmail" src="https://cdn-icons-png.flaticon.com/512/95/95627.png" alt="imagenEmail"></a>
+    </section>
+    
+    
+</body>
+</html>

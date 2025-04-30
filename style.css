@@ -1,0 +1,239 @@
+body {
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(-45deg, #000000, #0a0a23, #001f3f, #000000);
+  background-size: 400% 400%;
+  animation: animarFondo 10s ease infinite;
+  height: 100vh;
+  margin: 0;
+}
+
+@keyframes animarFondo {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+
+
+.menu ul {
+    list-style-type: none; 
+    padding: 0; 
+    margin: 0; 
+    text-align: right; 
+  }
+
+  .menu li {
+    display: inline; 
+    margin-right: 20px; 
+  }
+  
+  .menu a {
+    text-decoration: none; 
+    color: white;
+    font-size: 25px; 
+  }
+
+  .imagenPerfil {
+    text-align: center;
+  }
+  
+  .imagenPerfil img {
+    padding: 0;
+    background: transparent;
+    filter: drop-shadow(0 0 10px #4fc3f7);
+    transition: 0.5s;
+    margin-top: 40px;
+  }  
+
+  .imagenPerfil p{
+    background: transparent;
+    border: none;
+    padding: 0;
+    color: #f5f5f5;
+    font-size: 25px;
+  }
+
+#acerca-de-mi {
+  max-width: 800px;
+  margin: 4rem auto;
+  padding: 0 2rem;
+  text-align: left;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #f5f5f5;
+}
+
+#acerca-de-mi p {
+  background: transparent;
+  border: none;
+  padding: 0;
+}
+
+#acerca-de-mi h2 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #fff;
+  margin-top: 14rem;
+}
+
+#contacto {
+  text-align: center;
+}
+
+#contacto h3 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #fff;
+}
+
+#contacto h6 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #fff;
+}
+
+#contacto form {
+  display: flex;
+  width: 300px;
+  flex-direction: column;
+  margin: auto;
+}
+
+#contacto label {
+  width: 300px;
+  text-align: center;
+  font-size: 20px;
+  margin-top: 15px;
+  color: white;
+}
+
+#contacto button  {
+  text-align: center;
+  font-size: 20px;
+  width: 300px;
+  margin-top: 15px;
+}
+
+.imgLinkedIn, .imgGitHub, .imgEmail{
+  filter: invert(1);
+  width: 100px;
+  padding-left: 20px;
+}
+
+.imgLinkedIn:hover, .imgGitHub:hover, .imgEmail:hover {
+  transform: scale(1.2);
+}
+
+
+#proyectos h4 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #fff;
+}
+
+.proyectos-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.proyecto-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  max-width: 300px;
+  padding: 1rem;
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+
+.proyecto-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(79, 195, 247, 0.8); /* Brilla azul */
+}
+
+.proyecto-card h5 {
+  font-size: 20px;
+  margin: 15px 0 10px;
+  color: white;
+}
+
+.proyecto-card h1 {
+  font-size: 20px;
+  margin: 15px 0 10px;
+  color: white;
+}
+
+.proyecto-card h2 {
+  font-size: 20px;
+  margin: 15px 0 10px;
+  color: white;
+}
+
+.proyecto-card p {
+  font-size: 15px;
+  color: white;
+  text-align: right;
+  padding: 10px 20px; /* Agrega espacio adentro del párrafo */
+  margin: 10px 0;
+}
+
+.video {
+  position: relative;
+  padding-bottom: 56.25%; /* relación 16:9 */
+  height: 0;
+  overflow: hidden;
+}
+
+.video iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#conocimientos {
+  max-width: 800px;
+  margin: 4rem auto;
+  padding: 0 2rem;
+  text-align: left;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #f5f5f5;
+}
+
+#conocimientos h5{
+  font-size: 2.2rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #fff;
+}
+
+#conocimientos p {
+  background: transparent;
+  border: none;
+  padding: 0;
+}
+
+#conocimientos img {
+  width: 100px;
+  border-radius: 50%;
+}
