@@ -3,141 +3,201 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi portfolio web</title>
+    <title>Mi Portfolio Web</title>
 
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-
     <link rel="stylesheet" href="style.css">
-    <script src="codigo.js"></script>
-
+    <script src="codigo.js" defer></script>
 </head>
 <body id="body">
 
-    <header>
-        <div class="menu">
-            <ul>
+    <header class="navbar">
+        <nav>
+            <ul class="nav-links">
                 <li><a href="#acerca-de-mi">Acerca de mí</a></li>
                 <li><a href="#proyectos">Proyectos</a></li>
                 <li><a href="#contacto">Contacto</a></li>
                 <li><a href="#conocimientos">Conocimientos</a></li>
             </ul>
-        </div>  
+        </nav>
     </header>
-    
-    <div class="imagenPerfil">
-        <img width= "300px" src="Imagenes/miperfilPortfolio.png" alt="Mi imagen del portfolio">
-        <p>
-            ¡Hola, soy Lucia! programadora en formación en la UTN FRGP.<br> 
-            Apasionada por el desarrollo, la música y los nuevos desafíos 🧠💻
-        </p>
-    </div>
 
-    <section id="acerca-de-mi">
-        <h2>Acerca de mi👩‍💻</h2>
+    <section class="hero">
+        <div class="imagenPerfil">
+            <img class="profile-img" src="Imagenes/miperfilPortfolio.png" alt="Mi imagen del portfolio">
+            <h1>¡Hola, soy Lucia!</h1>
+            <p>Programadora en formación en la UTN FRGP.<br>
+            Apasionada por el desarrollo, la música y los nuevos desafíos 🧠💻</p>
+        </div>
+    </section>
+
+    <section id="acerca-de-mi" class="section">
+        <h2>Acerca de mí 👩‍💻</h2>
         <p>
             Soy Lucía, estudiante de la Tecnicatura Superior en Programación en la UTN FRGP. <br>
-            Me caracterizo por ser una persona proactiva, y en aprendizaje continuo. <br>
+            Me caracterizo por ser una persona proactiva y en aprendizaje continuo. <br>
             Siento una gran pasión tanto por la programación como por la música. <br>
             Además, poseo un nivel B2 de inglés, idioma que disfruto y considero fundamental para mi desarrollo profesional. <br>
             Me motivan los desafíos y estoy siempre dispuesta a superarme🚀.
         </p>
     </section>
 
-    <section id="conocimientos">
-        <h5>Conocimientos</h5>
+    <section id="conocimientos" class="section">
+        <h2>Conocimientos</h2>
         <p>
             Poseo sólidos conocimientos en HTML, CSS, JavaScript, C++ y C#. <br>
             Además, cuento con una base en Python y manejo de bases de datos en SQL Server. <br>
             También tengo experiencia en la gestión de proyectos utilizando Trello, aplicando buenas prácticas de organización y planificación.
         </p>
-        <img src="https://cdn.pixabay.com/photo/2017/08/05/11/16/logo-2582748_960_720.png" alt="imagenHTML">
-        <img src="https://cdn.pixabay.com/photo/2017/08/05/11/16/logo-2582747_1280.png" alt="imagenCSS">
-        <img src="https://static.vecteezy.com/system/resources/previews/027/127/463/non_2x/javascript-logo-javascript-icon-transparent-free-png.png" alt="imagenJavaScript">
-        <img src="https://cdn.iconscout.com/icon/free/png-256/free-cplusplus-3628708-3029933.png" alt="imagenC">
-        <img src="https://cdn.iconscout.com/icon/free/png-256/free-csharp-1175240.png" alt="imagenC#">
-        <img src="https://www.todosoluciones.es/wp-content/uploads/2024/11/Python-Logo-600x445.png.webp" alt="imagenPython">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmq5AUsCoLML5k5TImMJKEfgny5Ak9uT2dsw&s" alt="imagenSQL">
+        <div class="skills-icons">
+            <img src="https://cdn.pixabay.com/photo/2017/08/05/11/16/logo-2582748_960_720.png" alt="HTML5">
+            <img src="https://cdn.pixabay.com/photo/2017/08/05/11/16/logo-2582747_1280.png" alt="CSS3">
+            <img src="https://static.vecteezy.com/system/resources/previews/027/127/463/non_2x/javascript-logo-javascript-icon-transparent-free-png.png" alt="JavaScript">
+            <img src="https://cdn.iconscout.com/icon/free/png-256/free-cplusplus-3628708-3029933.png" alt="C++">
+            <img src="https://cdn.iconscout.com/icon/free/png-256/free-csharp-1175240.png" alt="C#">
+            <img src="https://www.todosoluciones.es/wp-content/uploads/2024/11/Python-Logo-600x445.png.webp" alt="Python">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmq5AUsCoLML5k5TImMJKEfgny5Ak9uT2dsw&s" alt="SQL Server">
+        </div>
     </section>
 
-    <section id="proyectos">
-        <h4>Mis Proyectos</h4>
-        <div class="proyectos-cards">
-            <!-- primer Proyecto -->
-            <div class="proyecto-card">
-                <div class="video">
-                    <iframe src="https://www.youtube.com/embed/DJDzxcUpP1E" width="560" height="315" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-                </div>
-                <div class="proyecto-info">
-                    <h5>Ball Dash</h5>
-                    <p>Es un juego en desarrollo en el que una pelota roja que debe recolectar monedas para sumar puntos. <br> 
-                       Además, hay un objeto que al ser atrapado, otorga un impulso de velocidad para hacer el juego más dinámico.</p>
-                    <div class="proyecto-buttons">
-                        <a href="https://github.com/lucpaz21/Ball-Dash.git" target="_blank" class="btn-github">Ver en GitHub</a>
-                        <a href="https://www.youtube.com/watch?v=DJDzxcUpP1E" target="_blank" class="btn-youtube">Ver Video</a>
-                    </div>
-                </div>
+    <section id="experiencia" class="section">
+        <h2>Experiencia Laboral</h2>
+        <div class="job-entry"> <h3>Change Management - Soporte técnico y Mejora de procesos</h3>
+            <h4 class="company-info">
+                ArgenPesos
+                <img src="Imagenes/argenpesosicon.png" alt="Logo ArgenPesos" class="company-logo">
+                | Mayo 2024 - Presente
+            </h4>
+            <ul>
+                <li>Análisis, diseño e implementación de mejoras operativas.</li>
+                <li>Uso de SQL y Excel para reportes de gestión.</li>
+                <li>Coordinación con el equipo de desarrollo para mejoras técnicas.</li>
+                <li>Participación en reuniones estratégicas.</li>
+                <li>Soporte de mesa de ayuda y resolución a fallas del sistema.</li>
+            </ul>
+        </div>
+        <div class="job-entry"> <h3>Atención al Cliente</h3>
+            <h4 class="company-info">
+                ArgenPesos
+                <img src="Imagenes/argenpesosicon.png" alt="Logo ArgenPesos" class="company-logo">
+                | Mayo 2023 - Mayo 2024
+            </h4>
+            <ul>
+                <li>Atención al cliente por redes sociales, mail y teléfono.</li>
+                <li>Reportes en Excel para análisis y seguimiento.</li>
+                <li>Resolución de reclamos, denuncias y gestión de cuentas.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="proyectos" class="section">
+    <h2>Mis Proyectos</h2>
+    <div class="proyectos-cards">
+        <div class="project-card">
+            <div class="video">
+                <img src="Imagenes/BallDashJuego.png" alt="Animación Ball Dash">
             </div>
-            
-            <!-- segundo Proyecto -->
-            <div class="proyecto-card">
-                <div class="video">
-                    <iframe src="https://www.youtube.com/embed/g_jGhR-fJbU" width="560" height="315" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-                </div>
-                <div class="proyecto-info">
-                    <h5>Sistema de Gestion</h5>
-                    <p>Este proyecto es un sistema de gestión diseñado para optimizar la compra y venta de productos tecnológicos. <br> 
-                        Permite visualizar informes de ventas por año, realizar ventas a clientes sumando puntos de fidelización, registrar <br> 
-                        compras a proveedores para controlar el stock de mercadería y gestionar el registro de vendedores del local. <br> 
-                        Es una herramienta integral que facilita la administración diaria del comercio.</p>
-                    <div class="proyecto-buttons">
-                        <a href="https://github.com/lugoivan97/proyectoProgramacion2.git" target="_blank" class="btn-github">Ver en GitHub</a>
-                        <a href="https://www.youtube.com/watch?v=g_jGhR-fJbU" target="_blank" class="btn-youtube">Ver Video</a>
-                    </div>
-                </div>
-            </div>
-    
-            <!-- tercer Proyecto -->
-            <div class="proyecto-card">
-                <div class="video">
-                    <iframe src="https://youtube.com/embed/cQ1BaazrE10" width="560" height="315" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-                </div>
-                <div class="proyecto-info">
-                    <h5>Aplicacion de Escritorio</h5>
-                    <p>Es una aplicacion de escritorio para administrar artículos tecnológicos, realizado como Trabajo Practico en la materia Programacion III.</p>
-                    <div class="proyecto-buttons">
-                        <a href="https://github.com/LuciaShro/tp-winform-equipo-3B.git" target="_blank" class="btn-github">Ver en GitHub</a>
-                        <a href="https://www.youtube.com/watch?v=cQ1BaazrE10" target="_blank" class="btn-youtube">Ver Video</a>
-                    </div>
+            <div class="proyecto-info">
+                <h3>Ball Dash</h3>
+                <p>Juego en desarrollo donde una pelota roja recolecta monedas y objetos para sumar puntos y obtener impulsos de velocidad, ofreciendo una experiencia dinámica. Desarrollado en <strong>C++</strong>.</p>
+                <div class="proyecto-buttons">
+                    <a href="https://github.com/lucpaz21/Ball-Dash.git" target="_blank" class="btn-github">Ver en GitHub</a>
                 </div>
             </div>
         </div>
-    </section>
-    
-        
 
-    </section>
+        <div class="project-card">
+            <div class="video">
+                <img src="https://media.giphy.com/media/l0HlGF50d8bM3VpTy/giphy.gif" alt="Animación Sistema de Gestión de Inventario">
+            </div>
+            <div class="proyecto-info">
+                <h3>Sistema de Gestión de Comercio</h3>
+                <p>Sistema para optimizar la compra y venta de productos tecnológicos. Permite gestionar informes de ventas, registrar transacciones, controlar stock y administrar vendedores, facilitando la administración diaria del comercio. Implementado en <strong>C++</strong>.</p>
+                <div class="proyecto-buttons">
+                    <a href="https://github.com/lugoivan97/proyectoProgramacion2.git" target="_blank" class="btn-github">Ver en GitHub</a>
+                </div>
+            </div>
+        </div>
 
-    <section id="contacto">
-        <h6>Formulario de Contacto</h6>
+        <div class="project-card">
+            <div class="video">
+                <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExYTJkbW04d3ZtYnN4Z3BpbHRkdDR4dnQ0NWEwdndkdHR5YXN1MGF0bCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3ohhwL2j9zB9eMhG6Q/giphy.gif" alt="Animación Aplicación de Escritorio con Base de Datos">
+            </div>
+            <div class="proyecto-info">
+                <h3>Administración de Artículos Tecnológicos</h3>
+                <p>Aplicación de escritorio para la gestión integral de artículos tecnológicos, incluyendo la administración de datos y el control de inventario, con persistencia de datos en <strong>SQL Server</strong>. Desarrollada con <strong>C# WinForms</strong>.</p>
+                <div class="proyecto-buttons">
+                    <a href="https://github.com/LuciaShro/tp-winform-equipo-3B.git" target="_blank" class="btn-github">Ver en GitHub</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <div class="video">
+                <img src="Imagenes/promoweb.png" alt="Animación Desarrollo Web y API">
+            </div>
+            <div class="proyecto-info">
+                <h3>Promo WEB y API de Productos</h3>
+                <p>Aplicación web para la gestión de promociones con vouchers y una <strong>API RESTful</strong> para la administración de productos. Utiliza arquitectura en capas y persistencia en <strong>SQL Server</strong>. Desarrollado con <strong>C#</strong> y <strong>ASP.NET</strong>.</p>
+                <div class="proyecto-buttons">
+                    <a href="https://github.com/lucpaz21/tp-web-equipo3B.git" target="_blank" class="btn-github">Ver en GitHub (Web)</a>
+                    <a href="https://github.com/LuciaShro/TP-APIs-Equipo-3B.git" target="_blank" class="btn-github">Ver en GitHub (API)</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <div class="video">
+                <img src="Imagenes/AppLogistica.png" alt="Aplicación Logística preview">
+            </div>
+            <div class="proyecto-info">
+                <h3>Aplicación Web de Gestión Logística</h3>
+                <p>Desarrollo de una aplicación web integral para la administración eficiente de transportistas, clientes, productos, rutas y órdenes de envío. Optimiza procesos de distribución y permite un seguimiento detallado de pedidos con roles diferenciados. Desarrollada con <strong>C#</strong>, <strong>ASP.NET</strong> y <strong>SQL Server</strong>.</p>
+                <div class="proyecto-buttons">
+                    <a href="https://github.com/LuciaShro/TPI-SistemaDeLogistica-Equipo3B.git" target="_blank" class="btn-github">Ver en GitHub</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <section id="contacto" class="section">
+        <h2>Formulario de Contacto</h2>
         <form action="https://formsubmit.co/luciapazmanagement@gmail.com" method="POST" onsubmit="return showConfirmation()">
-            <label for="Nombre">Nombre</label><input type="text" name="nombre" placeholder="Nombre" required>
-            <label for="Apellido">Apellido</label><input type="text" name="apellido" placeholder="Apellido" required>
-            <label for="Telefono">Telefono</label><input type="tel" name="telefono" placeholder="Teléfono" required>
-            <label for="Email">Email</label><input type="email" name="email" placeholder="Email" required>
-            <label for="Comentarios">Comentarios</label><textarea name="comentarios" placeholder="Comentarios" required></textarea>
-        
-            
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Nombre" required>
+
+            <label for="apellido">Apellido</label>
+            <input type="text" id="apellido" name="apellido" placeholder="Apellido" required>
+
+            <label for="telefono">Teléfono</label>
+            <input type="tel" id="telefono" name="telefono" placeholder="Teléfono" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Email" required>
+
+            <label for="comentarios">Comentarios</label>
+            <textarea id="comentarios" name="comentarios" placeholder="Comentarios" required></textarea>
+
             <input type="hidden" name="_autoresponse" value="false">
             <input type="hidden" name="_next" value="https://lucpaz21.github.io/Portfolio-Web/">
 
             <button type="submit">Enviar</button>
-          </form>
-        <h3>Contacto</h3>
-        <a href="https://www.linkedin.com/in/luciamilagrospaz/" target="_blank"> <img class="imgLinkedIn" src="https://cdn-icons-png.flaticon.com/512/4401/4401412.png" alt="imagenLinkedIn"></a>
-        <a href="https://github.com/lucpaz21" target="_blank"><img class="imgGitHub" src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="imagenGitHub"></a>
-        <a href="mailto:luciapazmanagement@gmail.com" target="_blank"><img class="imgEmail" src="https://cdn-icons-png.flaticon.com/512/95/95627.png" alt="imagenEmail"></a>
+        </form>
+
+        <h3 class="contact-links-title">Encuéntrame aquí:</h3>
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/luciamilagrospaz/" target="_blank">
+                <img class="imgLinkedIn" src="https://cdn-icons-png.flaticon.com/512/4401/4401412.png" alt="LinkedIn">
+            </a>
+            <a href="https://github.com/lucpaz21" target="_blank">
+                <img class="imgGitHub" src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub">
+            </a>
+            <a href="mailto:luciapazmanagement@gmail.com" target="_blank">
+                <img class="imgEmail" src="https://cdn-icons-png.flaticon.com/512/95/95627.png" alt="Email">
+            </a>
+        </div>
     </section>
-    
-    
-</body> 
+
+</body>
 </html>

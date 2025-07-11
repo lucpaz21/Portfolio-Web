@@ -1,0 +1,11 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "chrome",
+            "request": "launch",
+            "name": "Abrir Portfolio Web",
+            "file": "${workspaceFolder}/index.html" // Cambia 'index.html' si tu archivo principal tiene otro nombre
+        }
+    ]
+}

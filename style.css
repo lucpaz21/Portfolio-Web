@@ -1,252 +1,472 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
-  font-family: 'Inter', sans-serif;
-  background: linear-gradient(-45deg, rgba(0, 0, 0, 0.8), rgba(10, 10, 35, 0.8), rgba(0, 31, 63, 0.8), rgba(0, 0, 0, 0.8)); /* Fondo con opacidad */
-  background-size: 400% 400%;
-  animation: animarFondo 10s ease infinite;
-  height: 100vh;
-  margin: 0;
-}
-
-@keyframes animarFondo {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
-
-
-.menu ul {
-    list-style-type: none; 
-    padding: 0; 
-    margin: 0; 
-    text-align: right; 
-  }
-
-  .menu li {
-    display: inline; 
-    margin-right: 20px; 
-  }
-  
-  .menu a {
-    text-decoration: none; 
-    color: white;
-    font-size: 25px; 
-  }
-
-  .imagenPerfil {
-    text-align: center;
-  }
-  
-  .imagenPerfil img {
-    padding: 0;
-    background: transparent;
-    filter: drop-shadow(0 0 10px #4fc3f7);
-    transition: 0.5s;
-    margin-top: 40px;
-  }  
-
-  .imagenPerfil p{
-    background: transparent;
-    border: none;
-    padding: 0;
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
     color: #f5f5f5;
-    font-size: 25px;
-  }
-
-#acerca-de-mi {
-  max-width: 800px;
-  margin: 4rem auto;
-  padding: 0 2rem;
-  text-align: left;
-  font-size: 1.1rem;
-  line-height: 1.8;
-  color: #f5f5f5;
+    line-height: 1.6;
+    scroll-behavior: smooth;
 }
 
-#acerca-de-mi p {
-  background: transparent;
-  border: none;
-  padding: 0;
+/* Header and Navigation */
+.navbar {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
-#acerca-de-mi h2 {
-  font-size: 2.2rem;
-  font-weight: 700;
-  text-align: center;
-  margin-bottom: 2rem;
-  color: #fff;
-  margin-top: 14rem;
+.nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
 }
 
-#contacto {
-  text-align: center;
+.nav-links a {
+    text-decoration: none;
+    color: #f5f5f5;
+    font-weight: 600;
+    transition: color 0.3s ease;
 }
 
-#contacto h3 {
-  font-size: 2.2rem;
-  font-weight: 700;
-  text-align: center;
-  margin-bottom: 2rem;
-  color: #fff;
+.nav-links a:hover {
+    color: #4fc3f7; /* Light blue */
 }
 
-#contacto h6 {
-  font-size: 2.2rem;
-  font-weight: 700;
-  text-align: center;
-  margin-bottom: 2rem;
-  color: #fff;
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 4rem 1rem;
+    min-height: 100vh; /* Asegura que ocupe al menos el alto de la pantalla */
+    display: flex; /* Para centrar el contenido verticalmente */
+    align-items: center; /* Centra verticalmente */
+    justify-content: center; /* Centra horizontalmente */
+    flex-direction: column; /* Organiza el contenido en columna */
 }
 
-#contacto form {
-  display: flex;
-  width: 300px;
-  flex-direction: column;
-  margin: auto;
+.hero h1 {
+    font-size: 2.5rem;
+    margin-top: 1rem;
+    color: #4fc3f7; /* Light blue */
 }
 
-#contacto label {
-  width: 300px;
-  text-align: center;
-  font-size: 20px;
-  margin-top: 15px;
-  color: white;
+.hero p {
+    font-size: 1.2rem;
+    margin: 1rem auto 2rem;
+    max-width: 600px; /* Limit width for readability */
 }
 
-#contacto button  {
-  text-align: center;
-  font-size: 20px;
-  width: 300px;
-  margin-top: 15px;
+.profile-img {
+    width: 200px;
+    height: 200px; /* Added height for consistent circle */
+    border-radius: 50%;
+    border: 4px solid #4fc3f7; /* Light blue border */
+    box-shadow: 0 0 20px rgba(79, 195, 247, 0.5); /* Blue glow */
+    object-fit: cover; /* Ensures image covers the circular area */
 }
 
-.imgLinkedIn, .imgGitHub, .imgEmail{
-  filter: invert(1);
-  width: 100px;
-  padding-left: 20px;
+/* General Section Styling */
+.section {
+    padding: 4rem 2rem;
+    max-width: 900px;
+    margin: auto;
+    text-align: center; /* Center content within sections */
+    min-height: 100vh; /* Asegura que cada bloque ocupe al menos el alto completo de la pantalla */
+    display: flex; /* Para centrar el contenido verticalmente */
+    flex-direction: column; /* Organiza el contenido en columna */
+    justify-content: center; /* Centra verticalmente */
 }
 
-.imgLinkedIn:hover, .imgGitHub:hover, .imgEmail:hover {
-  transform: scale(1.2);
+.section h2 {
+    font-size: 2.5rem; /* Larger and more prominent */
+    margin-bottom: 2rem;
+    color: #4fc3f7; /* Light blue */
 }
 
-
-#proyectos {
-  padding: 2rem;
+.section p {
+    font-size: 1.1rem;
+    max-width: 700px; /* Limit width for readability */
+    margin: 0 auto 1.5rem auto; /* Center text and add margin below */
 }
 
-#proyectos h4 {
-  text-align: center;
-  margin-bottom: 2rem;
-  color: white;
-  font-size: 2.2rem;
+/* Skills Section */
+.skills-icons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem; /* Increased gap for better spacing */
+    margin-top: 2rem;
 }
 
+.skills-icons img {
+    width: 70px; /* Slightly larger icons */
+    height: 70px;
+    object-fit: contain;
+    filter: drop-shadow(0 0 8px #4fc3f7); /* More pronounced glow */
+    transition: transform 0.3s ease;
+}
+
+.skills-icons img:hover {
+    transform: scale(1.1); /* Subtle hover effect */
+}
+
+/* Projects Section */
 .proyectos-cards {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  gap: 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
+    gap: 2rem; /* Space between cards */
+    margin-top: 2rem;
 }
 
-.proyecto-card {
-  background-color: #fff;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-  width: 100%;
-  max-width: 600px;
-  margin-bottom: 2rem;
+.project-card {
+    background: #1a2a33; /* Darker background for contrast */
+    color: #f5f5f5;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Stronger shadow */
+    overflow: hidden; /* Ensures image corners are rounded */
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.video {
-  width: 100%;
-  height: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.project-card:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.4);
 }
 
-.proyecto-info {
-  padding: 1rem;
-  text-align: center;
+.project-card .video img {
+    width: 100%;
+    height: 200px; /* Fixed height for consistent image size */
+    object-fit: contain; /* La imagen se ajustará sin recortarse */
+    background-color: #0f2027; /* Color de fondo para rellenar espacios si la imagen no llena el contenedor */
+    border-radius: 10px 10px 0 0; /* Top corners rounded */
 }
 
-.proyecto-info h5 {
-  font-size: 1.5rem;
-  color: #333;
-  margin-bottom: 1rem;
+.project-info {
+    padding: 1.5rem;
+    text-align: left; /* Align text left within info block */
+    flex-grow: 1; /* Allows info section to expand */
+    display: flex;
+    flex-direction: column;
 }
 
-.proyecto-info p {
-  font-size: 1rem;
-  color: #666;
-  margin-bottom: 1rem;
+.project-info h3 {
+    margin-top: 0; /* Remove default top margin */
+    font-size: 1.8rem;
+    color: #4fc3f7; /* Light blue */
+    margin-bottom: 0.5rem;
 }
 
+.project-info p {
+    font-size: 0.95rem;
+    color: #cccccc;
+    margin-bottom: 1.5rem;
+    flex-grow: 1; /* Allows paragraph to take available space */
+}
+
+/* --- ESTILOS MODIFICADOS PARA LOS BOTONES DE PROYECTO --- */
 .proyecto-buttons {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
+    display: flex;
+    flex-wrap: wrap; /* Permite que los botones salten de línea si no hay espacio */
+    justify-content: center; /* Centra los botones horizontalmente */
+    gap: 0.75rem; /* Espacio entre los botones, ligeramente reducido para caber mejor */
+    margin-top: auto; /* Empuja los botones a la parte inferior de la tarjeta */
 }
 
-.btn-github, .btn-youtube {
-  padding: 0.5rem 1rem;
-  font-size: 1rem;
-  text-decoration: none;
-  border-radius: 5px;
-  color: #fff;
-  transition: background-color 0.3s;
+.proyecto-buttons a {
+    /* Si solo hay un botón, que ocupe el 100%, si hay más, que se adapten */
+    flex-basis: 100%; /* Por defecto ocupa todo el ancho */
+    flex-grow: 1; /* Permite que los botones crezcan para llenar el espacio */
+    max-width: 100%; /* Ocupa el ancho completo por defecto */
+    padding: 0.75rem 1.25rem;
+    border-radius: 25px; /* Botones con forma de píldora */
+    text-decoration: none;
+    font-weight: 600;
+    text-align: center; /* Asegura que el texto esté centrado en el botón */
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
+
+/* Ajuste para cuando hay dos botones, para que ocupen casi la mitad cada uno */
+.proyecto-buttons a:only-child {
+    max-width: 100%; /* Si es el único botón, ocupa todo el ancho */
+}
+.proyecto-buttons a:nth-child(2):last-child {
+    max-width: 48%; /* Si hay dos, ocupan casi la mitad */
+}
+
 
 .btn-github {
-  background-color: #333;
+    background-color: #333; /* Darker for GitHub */
+    color: #f5f5f5;
+    border: 2px solid #333;
 }
 
 .btn-github:hover {
-  background-color: #555;
+    background-color: #555;
+    transform: translateY(-2px);
 }
 
-.btn-youtube {
-  background-color: #ff0000;
+/* Eliminadas las reglas para .btn-youtube ya que no serán utilizados */
+
+/* --- FIN DE ESTILOS MODIFICADOS PARA LOS BOTONES DE PROYECTO --- */
+
+
+/* Contact Section - Form */
+#contacto h2 {
+    margin-bottom: 2.5rem;
 }
 
-.btn-youtube:hover {
-  background-color: #cc0000;
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+    max-width: 600px; /* Slightly wider form */
+    margin: 0 auto 3rem auto; /* Center form and add space below */
+    background-color: #1a2a33; /* Dark background for form */
+    padding: 2.5rem;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+form label {
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+    text-align: left; /* Align labels left */
+    color: #4fc3f7; /* Light blue for labels */
+}
+
+form input,
+form textarea {
+    padding: 1rem; /* More padding */
+    border: 1px solid #334e68; /* Subtle border */
+    border-radius: 8px; /* Slightly rounded corners */
+    font-size: 1rem;
+    background-color: #0f2027; /* Darker input background */
+    color: #f5f5f5;
+}
+
+form input:focus,
+form textarea:focus {
+    outline: none;
+    border-color: #03a9f4; /* Un azul ligeramente más oscuro al enfocar */
+    box-shadow: 0 0 0 3px rgba(3, 169, 244, 0.3); /* Cambiado a un azul ligeramente más oscuro también */
+}
+
+form textarea {
+    min-height: 120px; /* Taller textarea */
+    resize: vertical; /* Allow vertical resizing */
+}
+
+form button {
+    padding: 1rem;
+    background-color: #4fc3f7; /* Light blue submit button */
+    color: #0f2027; /* Dark text for contrast */
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: 1rem; /* Space above button */
+}
+
+form button:hover {
+    background-color: #03a9f4; /* Darker blue on hover */
+    transform: translateY(-2px);
+}
+
+/* Contact Section - Social Links */
+.contact-links-title {
+    font-size: 2rem;
+    color: #4fc3f7;
+    margin-bottom: 1.5rem;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 2.5rem; /* More space between icons */
+    margin-top: 1rem; /* Adjusted margin */
+}
+
+.social-links img {
+    width: 60px; /* Size of social icons */
+    height: 60px;
+    object-fit: contain;
+    filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.4)); /* White glow */
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.social-links img:hover {
+    transform: scale(1.1);
+    filter: drop-shadow(0 0 10px #4fc3f7); /* Blue glow on hover */
 }
 
 
-#conocimientos {
-  max-width: 800px;
-  margin: 4rem auto;
-  padding: 0 2rem;
-  text-align: left;
-  font-size: 1.1rem;
-  line-height: 1.8;
-  color: #f5f5f5;
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .nav-links {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 0.5rem 0;
+    }
+
+    .hero {
+        padding: 3rem 1rem;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .profile-img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .section {
+        padding: 3rem 1.5rem;
+    }
+
+    .section h2 {
+        font-size: 2rem;
+    }
+
+    .section p {
+        font-size: 1rem;
+    }
+
+    .skills-icons img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .proyectos-cards {
+        grid-template-columns: 1fr; /* Stack cards on smaller screens */
+    }
+
+    .project-card .video img {
+        height: 180px;
+    }
+
+    .project-info h3 {
+        font-size: 1.5rem;
+    }
+
+    .project-info p {
+        font-size: 0.9rem;
+    }
+
+    /* --- MEDIA QUERY PARA BOTONES DE PROYECTO --- */
+    .proyecto-buttons {
+        flex-direction: column; /* Apila los botones verticalmente en pantallas pequeñas */
+        gap: 0.75rem;
+    }
+
+    .proyecto-buttons a {
+        max-width: 100%; /* Ocupa todo el ancho disponible */
+    }
+    /* --- FIN MEDIA QUERY PARA BOTONES DE PROYECTO --- */
+
+    form {
+        padding: 1.5rem;
+    }
+
+    form input,
+    form textarea,
+    form button {
+        padding: 0.8rem;
+        font-size: 0.95rem;
+    }
+
+    .social-links img {
+        width: 50px;
+        height: 50px;
+    }
 }
 
-#conocimientos h5{
-  font-size: 2.2rem;
-  font-weight: 700;
-  text-align: center;
-  margin-bottom: 2rem;
-  color: #fff;
+/* --- Experiencia Laboral Section Styles --- */
+#experiencia .job-entry {
+    background: #1a2a33; /* Fondo similar al de las tarjetas de proyecto */
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    margin-bottom: 2rem; /* Espacio entre entradas de trabajo */
+    text-align: left; /* Alinea el texto a la izquierda dentro de cada entrada */
 }
 
-#conocimientos p {
-  background: transparent;
-  border: none;
-  padding: 0;
+#experiencia .job-entry:last-child {
+    margin-bottom: 0; /* No hay margen inferior en la última entrada */
 }
 
-#conocimientos img {
-  width: 100px;
-  border-radius: 50%;
+#experiencia .job-entry h3 {
+    color: #4fc3f7; /* Color de título similar a otras secciones */
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+    text-align: center; /* Centrar el título del puesto */
+}
+
+#experiencia .job-entry h4.company-info {
+    color: #cccccc; /* Color para la información de la empresa/fechas */
+    font-size: 1.1rem;
+    font-weight: 400; /* Menos negrita que el título */
+    margin-bottom: 1.5rem;
+    display: flex; /* Para alinear el texto y el icono */
+    align-items: center; /* Centrar verticalmente el icono */
+    justify-content: center; /* Centrar horizontalmente la información de la empresa */
+    gap: 0.5rem; /* Espacio entre el texto y el icono */
+}
+
+#experiencia .job-entry .company-logo {
+    width: 25px; /* Tamaño del icono */
+    height: 25px;
+    object-fit: contain;
+    vertical-align: middle; /* Para que esté alineado con el texto */
+    filter: drop-shadow(0 0 3px rgba(255, 255, 255, 0.5)); /* Un pequeño brillo para que resalte */
+}
+
+#experiencia .job-entry ul {
+    list-style: disc; /* Puntos para la lista */
+    margin-left: 2rem; /* Indentación de la lista */
+    color: #f5f5f5; /* Color del texto de la lista */
+}
+
+#experiencia .job-entry ul li {
+    margin-bottom: 0.5rem; /* Espacio entre elementos de la lista */
+}
+
+/* Media Queries for Responsiveness - Ajustes para experiencia laboral */
+@media (max-width: 768px) {
+    #experiencia .job-entry {
+        padding: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+    #experiencia .job-entry h3 {
+        font-size: 1.5rem;
+    }
+    #experiencia .job-entry h4.company-info {
+        font-size: 1rem;
+        flex-wrap: wrap; /* Permite que el texto y el icono se envuelvan si no hay espacio */
+        justify-content: center;
+    }
+    #experiencia .job-entry .company-logo {
+        width: 20px;
+        height: 20px;
+    }
+    #experiencia .job-entry ul {
+        margin-left: 1.5rem;
+        font-size: 0.95rem;
+    }
 }
